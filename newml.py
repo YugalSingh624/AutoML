@@ -1,3 +1,7 @@
+import numpy as np
+if not hasattr(np, 'VisibleDeprecationWarning'):
+    np.VisibleDeprecationWarning = DeprecationWarning
+
 import pandas as pd
 import streamlit as st
 import base64
@@ -9,7 +13,7 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
-import pandas as pd
+
 import streamlit as st
 
 from utils import train_model,plot_roc_curve,perform_feature_engineering,performe_feature_engineering_prediction
